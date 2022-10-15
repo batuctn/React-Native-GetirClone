@@ -27,7 +27,7 @@
 
 <img src="https://user-images.githubusercontent.com/96943978/195986913-8ac6bfeb-0272-4aa4-998d-c052155e0d2e.png" width=25% height=25%>
 
-I used react-native-vector-icons, react-navigation,redux, firebase and aws amplify.
+
 
 
 ## Get Started
