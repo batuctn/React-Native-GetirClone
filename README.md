@@ -46,6 +46,7 @@ _For more examples, please refer to the [Documentation](https://reactnative.dev/
 
 ## Roadmap
 -   [x] UI of home page
+-   [x] Tabbar add + navigations sheme
 -   [ ] UI of sign in & sign up pages
 -   [ ] UI of setting page
 -   [ ] UI of product details
