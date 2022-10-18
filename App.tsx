@@ -1,19 +1,25 @@
-import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
-import HomeScreen from "./src/screens/HomeScreen";
+import { NavigationContainer } from "@react-navigation/native";
+import RootNavigator from "./src/navigators/RootNavigator";
+import {
+  useSafeAreaInsets,
+  SafeAreaProvider,
+} from "react-native-safe-area-context";
+
+const Contain = () => {
+  const { top } = useSafeAreaInsets();
+  return (
+    <SafeAreaProvider style={{ paddingTop: top }}>
+      <RootNavigator />
+    </SafeAreaProvider>
+  );
+};
 export default function App() {
   return (
-    <View style={styles.container}>
-      <HomeScreen />
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaProvider>
+      <NavigationContainer>
+        <Contain />
+      </NavigationContainer>
+    </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    marginTop: "15%",
-  },
-});

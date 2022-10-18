@@ -3,7 +3,7 @@ import React from "react";
 import HeaderMain from "../../components/HeaderMain";
 import Banner from "../../components/Banner";
 import MainCotegories from "../../components/MainCotegories";
-const index = () => {
+const Index = () => {
   return (
     <ScrollView stickyHeaderIndices={[0]}>
       <HeaderMain />
@@ -13,4 +13,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
