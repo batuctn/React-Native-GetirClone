@@ -56,11 +56,11 @@ _For more examples, please refer to the [Documentation](https://reactnative.dev/
 -   [x] Tabbar add + navigations sheme
 -   [ ] UI of sign in & sign up pages
 -   [ ] UI of setting page
--   [ ] UI of product details
+-   [x] UI of product details
 -   [ ] UI of search page
 -   [ ] UI of shopping cart page and functionality
 -   [ ] Setting up search
--   [ ] Dont forget Redux
+-   [x] Dont forget Redux
 -   [ ] Theme change button functionality
 -   [ ] Sorting plugin for imports
 -   [ ] Absolute path property for imports
