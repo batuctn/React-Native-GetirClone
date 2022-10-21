@@ -1,6 +1,7 @@
 import { Dimensions, Text, TouchableOpacity, Image } from "react-native";
 import React from "react";
 import { Category } from "../../models";
+import { useNavigation } from "@react-navigation/native";
 
 type CategoryItemProps = {
   item: Category;
@@ -8,6 +9,7 @@ type CategoryItemProps = {
 const { width, height } = Dimensions.get("window");
 
 const index = ({ item }: CategoryItemProps) => {
+  const navigation = useNavigation();
   return (
     <TouchableOpacity
       style={{
@@ -17,6 +19,9 @@ const index = ({ item }: CategoryItemProps) => {
         alignItems: "center",
         justifyContent: "space-between",
         marginTop: 10,
+      }}
+      onPress={() => {
+        navigation.navigate("CategoryFilters", { category: item });
       }}
     >
       <Image

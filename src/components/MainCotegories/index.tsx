@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import CategoryItem from "../CategoryItem";
 import categoryGetir from "../../../assets/categories";
 
-const index = () => {
+const index = ({}) => {
   const [categories, setCategories] = useState(categoryGetir);
 
   return (
