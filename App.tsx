@@ -5,12 +5,18 @@ import {
   useSafeAreaInsets,
   SafeAreaProvider,
 } from "react-native-safe-area-context";
+import { StatusBar } from "expo-status-bar";
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
 const Contain = () => {
   const { top } = useSafeAreaInsets();
   return (
-    <SafeAreaProvider style={{ paddingTop: top }}>
-      <RootNavigator />
+    // <SafeAreaProvider style={{ paddingTop: top }}>
+    <SafeAreaProvider>
+      <Provider store={store}>
+        <RootNavigator />
+      </Provider>
     </SafeAreaProvider>
   );
 };
