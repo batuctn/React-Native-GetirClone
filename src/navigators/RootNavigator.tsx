@@ -16,7 +16,7 @@ const CustomTabBarButton = ({ children }) => {
   return (
     <TouchableOpacity
       onPress={() => {
-        navigation.navigate("CustomButtonNavigator");
+        navigation.navigate("CustomButtonNavigator", { screen: "Home" });
       }}
       style={{
         borderColor: "white",
