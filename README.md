@@ -28,6 +28,9 @@
 <div flex-directiom:"row" >
 <img src="https://user-images.githubusercontent.com/96943978/195986913-8ac6bfeb-0272-4aa4-998d-c052155e0d2e.png" width=25% height=25%>
 <img src="https://user-images.githubusercontent.com/96943978/196880459-578de433-07f4-4507-ab24-25a59a64b846.png" width=25% height=25%>
+<img src="https://user-images.githubusercontent.com/96943978/197196265-8163dfd0-c216-46bd-bb3c-4b6c7e63c92c.png" width=25% height=25%>
+
+
  </div>
 
 
@@ -53,11 +56,11 @@ _For more examples, please refer to the [Documentation](https://reactnative.dev/
 -   [x] Tabbar add + navigations sheme
 -   [ ] UI of sign in & sign up pages
 -   [ ] UI of setting page
--   [ ] UI of product details
+-   [x] UI of product details
 -   [ ] UI of search page
 -   [ ] UI of shopping cart page and functionality
 -   [ ] Setting up search
--   [ ] Dont forget Redux
+-   [x] Dont forget Redux
 -   [ ] Theme change button functionality
 -   [ ] Sorting plugin for imports
 -   [ ] Absolute path property for imports
