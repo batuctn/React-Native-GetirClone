@@ -65,7 +65,7 @@ function Index({ dataSub }: any) {
       horizontal={true}
     >
       {dataSub.map((item) => (
-        <View>
+        <View key={item.id}>
           <TypeBox setCat={setCategory} item={item} active={category} />
         </View>
       ))}

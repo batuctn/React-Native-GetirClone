@@ -14,7 +14,9 @@ function Index() {
         }}
       >
         {productsGetir.slice(0, 2).map((item) => (
-          <ProductItem key={item.id} item={item} />
+          <View key={item.id}>
+            <ProductItem key={item.id} item={item} />
+          </View>
         ))}
       </View>
       <Text style={{ color: "gray", fontWeight: "bold", padding: 14 }}>

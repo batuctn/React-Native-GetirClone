@@ -9,7 +9,9 @@ const index = ({}) => {
   return (
     <View style={styles.container}>
       {categories.map((item) => (
-        <CategoryItem key={item.id} item={item} />
+        <View key={item.id}>
+          <CategoryItem key={item.id} item={item} />
+        </View>
       ))}
     </View>
   );
