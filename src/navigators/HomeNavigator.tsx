@@ -1,18 +1,34 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import React from "react";
+import React, { useLayoutEffect, useEffect } from "react";
 import HomeScreens from "../screens/HomeScreen";
 import { Image, Text, TouchableOpacity } from "react-native";
 import CategoryFiltersScreen from "../screens/CategoryFiltersScreen";
-import ProductDetailsScreen from "../../src/screens/ProductDetailsScreen";
+import ProductDetails from "../../src/screens/ProductDetailsScreen";
 import {
   Entypo,
   Ionicons,
   Foundation,
   MaterialCommunityIcons,
 } from "@expo/vector-icons";
+import { getFocusedRouteNameFromRoute } from "@react-navigation/native";
 
 const Stack = createNativeStackNavigator();
-const HomeNavigator = ({ navigation }: any) => {
+const tabHiddenRoutes = ["ProductDetails"];
+
+const HomeNavigator = ({ navigation, route }) => {
+  React.useLayoutEffect(() => {
+    const routeName = getFocusedRouteNameFromRoute(route);
+
+    // console.log("Route Name is ", routeName);
+    if (tabHiddenRoutes.includes(routeName)) {
+      console.log("Kapandıııııı ", routeName);
+      navigation.setOptions({ tabBarStyle: { display: "none" } });
+    } else {
+      console.log("Açıkkkkkkkkk ", routeName);
+      navigation.setOptions({ tabBarStyle: { display: "flex" } });
+    }
+  }, [navigation, route]);
+
   return (
     <Stack.Navigator>
       <Stack.Screen
@@ -55,17 +71,15 @@ const HomeNavigator = ({ navigation }: any) => {
       />
       <Stack.Screen
         name="ProductDetails"
-        component={ProductDetailsScreen}
+        component={ProductDetails}
         options={{
-          headerTintColor: "white",
           headerBackTitleVisible: false,
-
+          headerTintColor: "#fff",
+          headerBackVisible: false,
           headerStyle: { backgroundColor: "#5C3EBC" },
+          headerTitleAlign: "center",
           headerLeft: () => (
-            <TouchableOpacity
-              onPress={() => navigation.goBack()}
-              style={{ paddingLeft: 8 }}
-            >
+            <TouchableOpacity onPress={() => navigation.goBack()}>
               <Ionicons
                 style={{ marginLeft: 8 }}
                 name="close"
