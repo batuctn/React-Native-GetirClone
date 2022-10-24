@@ -35,7 +35,7 @@ const index = ({ item }: CategoryItemProps) => {
         source={{ uri: item.src }}
       />
       <Text
-        style={{ padding: 5, fontWeight: "500", fontSize: 13, color: "gray" }}
+        style={{ padding: 4, fontWeight: "500", fontSize: 13, color: "gray" }}
       >
         {item.name}
       </Text>
